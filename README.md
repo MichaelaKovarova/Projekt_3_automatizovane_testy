@@ -6,9 +6,10 @@ TESTY OVĚŘUJÍ:
 
 1. Otevření domovské stránky Seznam.cz
 2. Nastavení cookies
-3. Přechod na službu Mapy.com
-4. Vyhledávání na stránce
-5. Funkčnost tlačítka pro návrat na začátek stránky (scroll up)
+3. Otevření okna pro přihlášení do emailu 
+4. Přechod na službu Mapy.com
+5. Vyhledávání na stránce
+   
 
 
 POŽADAVKY 

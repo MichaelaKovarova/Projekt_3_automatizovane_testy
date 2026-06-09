@@ -21,7 +21,7 @@ def test_map(page):
  #test vyhledávání na stránce https://www.seznam.cz/ 
 def test_vyhledavani(page):
     page.click('[data-title="Internet"]')
-    text_input = page.locator("#main-content > div.drag-and-drop > div.main-content > div > div > div > header > div > div > div > div.ogm-search > div > form > div > label > input")
+    text_input = page.locator(".search-form__input")
     text_input.fill("školní prázdniny")
 
     button = page.locator('[data-dot="search-button"]')

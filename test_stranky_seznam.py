@@ -1,11 +1,12 @@
-#test přesun na začátek stránky https://www.seznam.cz/ přes tlačítko
-def test_scroll(page):
-    locator = page.locator(".atm-scroll-up-button__icon")
-    locator.scroll_into_view_if_needed()
-    scroll_position = page.evaluate("window.scrollY")
-    assert scroll_position == 0
+#otevření okna pro přihlášení do emailu
+def test_email(page):
+    with page.expect_popup() as popup:
+        page.get_by_text("Přihlásit se").click()
 
+    login_page = popup.value
+    login_page.wait_for_load_state()
 
+    assert login_page.url.startswith("https://login.szn.cz")
 
 #test načtení mapy     
 def test_map(page):   
